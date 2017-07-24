@@ -1,0 +1,30 @@
+extends ./inc/layout
+block title
+    title index.jadeファイルのタイトルが入ります
+block meta
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    // og
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='')
+    meta(property='og:image', content='')
+    meta(property='og:title', content='')
+    meta(property='og:description', content='')
+    meta(property='og:site_name', content='')
+block css
+    link(rel='stylesheet', type='text/css', href='/assets/css/index.css', media='all')
+block js
+    script(type='text/javascript', src='/assets/js/jquery-1.11.3.min.js')
+    script(type='text/javascript', src='/assets/js/easing.js')
+    script(type='text/javascript', src='/assets/js/main.js')
+    //[if lt IE 10]
+    script(type='text/javascript', src='assets/js/html5shiv-printshiv.js')
+    script(type='text/javascript', src='assets/js/css3-mediaqueries.js')
+    script(type='text/javascript', src='assets/js/flexibility.js')
+    //[endif]
+block body
+    #content
+
+
+
+

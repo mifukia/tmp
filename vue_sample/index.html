@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if IE 6]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]> <html class="ie7"> <![endif]-->
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="ja">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!--page info-->
+    <title>Vue</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--og-->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <!--favicon-->
+    <link rel="shortcut icon" href="" />
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css" media="all" />
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+
+
+
+    <!--js-->
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/vue_dev.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <!--<script src="assets/js/pjax-api.min.js"></script>-->
+    <!--<script src="assets/js/easing.js"></script>-->
+    <script src="assets/js/main.js" defer></script>
+
+
+
+    <!--[if lt IE 10]>
+<script type="text/javascript" src="assets/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="assets/js/respond.min.js"></script>
+<script type="text/javascript" src="assets/js/flexibility.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+    <div id="card">
+        <header>{{title}}</header>
+
+        <div>
+            <input type="text" id="itemForm" v-on:keypress.enter="addItem">
+        </div>
+        <button v-on:click="addItem">ADD ITEM</button>
+
+        <ul>
+            <li v-for="(item , index) in items">
+               <button v-on:click="delItem(index)">X</button>
+                {{item.text}}
+            </li>
+        </ul>
+
+    </div>
+
+        <div id="temp">
+            <item-area v-bind:title-area="title"></item-area>
+            {{title}}
+        </div>
+
+
+
+</body>
+
+</html>
