@@ -1,0 +1,56 @@
+<!doctype html>
+<!--[if IE 6]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]> <html class="ie7"> <![endif]-->
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="ja">
+<!--<![endif]-->
+<head>
+<%
+var metaData = {};
+for(var key in meta) {
+  metaData[key] = meta[key].page1;
+}
+%>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+    <!--page info-->
+    <title><%= metaData.title %></title>
+    <meta name="description" content="<%= metaData.description %>" />
+    <meta name="keywords" content="<%= metaData.keyword %>" />
+    <!--og-->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="<%= metaData.og_description %>" />
+    <meta property="og:site_name" content="" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+
+<!--css-->
+<link rel="stylesheet" type="text/css" href="assets/css/index.css" media="all" />
+<!--js-->
+
+
+
+<!--[if lt IE 10]>
+<script type="text/javascript" src="assets/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="assets/js/respond.min.js"></script>
+<script type="text/javascript" src="assets/js/flexibility.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<% include common/_header %>
+<h1>EJS</h1>
+<div id="test">
+    <vue-test></vue-test>
+</div><!-- /#test -->
+
+<% include common/_footer %>
+<script type="text/javascript" src="assets/js/bundle.js"></script>
+</body>
+</html>
